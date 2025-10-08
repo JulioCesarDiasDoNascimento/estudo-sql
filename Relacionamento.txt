@@ -26,6 +26,15 @@ Relacionamento muitos para muitos/ many to many
     Ex: um produto pode estár em muitos pedidos. (MUITOS/MANY)
     Outro Ex: um pedido pode ter muitos produtos. (MUITOS/MANY)
 
+    Ex: da tabela item_pedido:
+        create table pedido_venda.item_pedido(pedido_id bigint primary key,
+                                      constraint pedido_id_fk foreign key (pedido_id)
+                                          references pedido_venda.pedido(id),
+                                     produto_id bigint,
+                                     constraint produto_id_fk foreign key (produto_id)
+                                         references pedido_venda.produto(id),
+                                     quantidade int);
+
 Tabela de relacionamento (Seria a foreign key de pedido e de produto) -> aqui seria uma tabela auxiliar Ex: item_pedido.
 item_pedido (id, pedido_id, produto_id)
 Duas foreign keys

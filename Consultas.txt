@@ -1,0 +1,36 @@
+Basico do select:
+
+select -- selecione
+from -- de
+(pode especificar a coluna) ou * = todas as colunas
+
+select nome from pedido_venda.cliente; -- vai retorna apenas a coluna nome
+select * from pedido_venda.cliente; -- vai retorna a tabela toda
+
+Where = onde -- filtra por um dado específico
+select * from pedido_venda.cliente where nome = 'Julio';
+select * from pedido_venda.pedido where observacao is not null;
+select * from pedido_venda.pedido where observacao is not null and data_entrega > '2025-10-10';
+
+And -- e, operador so vai responder se ambos forem verdadeiros
+or -- ou, operador so vai responder se um dos dois forem verdadeiros
+
+Consulta de relacionamentos de tabelas:
+    Usando o where:
+        select * from pedido_venda.pedido p,
+              pedido_venda.cliente c
+                where p.cliente_id = c.id;
+
+
+              -- Seleção de todas as colunas das tabelas relacionadas
+              select *
+-- Especificação das tabelas necessárias para a consulta com seus respectivos aliases
+from pedido_venda.cliente c, -- Tabela de clientes com alias 'c'
+     pedido_venda.pedido pe, -- Tabela de pedidos com alias 'pe'
+     pedido_venda.item_pedido i, -- Tabela de itens do pedido com alias 'i'
+     pedido_venda.produto pr -- Tabela de produtos com alias 'pr'
+-- Condições de junção e filtro
+where c.id = pe.cliente_id -- Relaciona cliente com pedido através do ID
+  and pe.id = i.pedido_id -- Relaciona pedido com item_pedido através do ID
+  and i.produto_id = pr.id -- Relaciona item_pedido com produto através do ID
+  and c.nome = 'Julio'; -- Filtra apenas pedidos do cliente Julio

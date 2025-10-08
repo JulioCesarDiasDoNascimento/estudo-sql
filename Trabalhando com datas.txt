@@ -1,0 +1,15 @@
+Observações:
+datetime 'yyyy-mm-dd hh:mm:ss'
+date 'yyyy-mm-dd'
+
+Função:
+now() -- agora
+(data) seria a coluna pesquisada.
+month -- usado no select Ex: where month(data) = 12 (Mes Dezembro)
+year -- usado no select Ex: where year(data) = 2025
+day -- usado no select Ex: where day(data) = 1 (Dia 1)
+
+
+
+
+
