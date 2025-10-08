@@ -1,2 +1,1 @@
-# estudo-sql
-# estudo-sql
+# Estudo de SQL

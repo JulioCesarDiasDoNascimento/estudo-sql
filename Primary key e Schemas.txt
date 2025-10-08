@@ -1,0 +1,40 @@
+Conceitos de Primary key.
+
+Ex:
+codigo |nome        | email          | data de nascimento
+1      |joao Silva  | jao@email.com  | 19/01/1990
+2      |Maria Santos| maria@email.com| 20/01/1990
+
+Primary key = valor que não pode ser repetido
+Ex: o email não pode ser repetido ou uma opção melhor é o codigo.
+
+um exemplo de codigo é o id;
+
+
+Schemas = estrutura de banco de dados.
+Conceito : agrupa um conjunto de tabelas abaixo de um nome.
+
+E um padrão para organizar as tabelas.
+NÂO MUITO USADO.
+
+No curso schemas é igual a database?
+
+
+CREATE DATABASE (NOME DO BANCO)
+    CREATE SCHEMA (NOME DO SCHEMA)
+        CREATE TABLE (NOME DA TABELA)
+
+        Ex: da criação da tabela
+            create table pedido_venda.pedido(
+            id bigint primary key,
+            data_criacao timestamp,
+            observacao text,
+            data_entrega date,
+            valor_frete decimal(6,2),
+            valor_total decimal(10,2));
+
+        Ex: de inserir dados nas tabelas
+        insert into pedido_venda.cliente (id, nome, email, data_nascimento)
+        values (1, 'Julio', 'juliocesarddn@gmail.com', '2003-03-05');
+
+

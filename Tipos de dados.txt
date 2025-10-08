@@ -1,0 +1,37 @@
+O SGBD para estudo é PostgreSQL.
+
+O Curso Banco de Dados e SQL para iniciantes, usa o MySQL
+
+1.3 - Tipo de Dados:
+
+* Coluana 1 | Coluna 2 | Coluna 3 -> Cada coluna tem um tipo de dados
+* Valor 1   | Valor 2  | Valor 3
+
+Exemplo Codigo:
+int tipo = 25;
+tipo - nome - valor
+int = tipo de dado
+
+SQL:
+    Numero:
+        BOOL ou BOOLEAN
+        INTEGER
+        BIGINT - interiro para numeros muitos grandes
+        DECIMAL [(M,D)]
+
+    Data e Tempo
+        DATE - é apenas para data Ex: Data de nascimento
+        DATETIME - data e hora
+        TIMESTAMP - data e hora com segundos
+
+    String
+        CHAR (M) - esse M significa a quantidade de caracteres
+        VARCHAR [(M)] - econima mais espaço para o texto
+        TEXT - texto longo
+        BLOB - arquivo binario Ex: para foto
+
+
+
+
+
+
