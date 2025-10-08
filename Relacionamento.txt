@@ -18,7 +18,19 @@ Relacionamentos entre tabelas.
 
 Relacionamentos muitos para um/ many to one.
     Ex: um pedido tem um cliente. (UM/ONE)
-    Ex: um cliente tem muitos pedidos. (MUITOS/MANY)
+
+Relacionamento um para muitos/ one to many
+        Ex: um cliente tem muitos pedidos. (MUITOS/MANY)
+
+Relacionamento muitos para muitos/ many to many
+    Ex: um produto pode estár em muitos pedidos. (MUITOS/MANY)
+    Outro Ex: um pedido pode ter muitos produtos. (MUITOS/MANY)
+
+Tabela de relacionamento (Seria a foreign key de pedido e de produto) -> aqui seria uma tabela auxiliar Ex: item_pedido.
+item_pedido (id, pedido_id, produto_id)
+Duas foreign keys
+Duas primary keys
+
 
 
 
