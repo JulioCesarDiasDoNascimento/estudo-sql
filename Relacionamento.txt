@@ -1,0 +1,24 @@
+Organização é o principal ponto.
+    Não deve existir dado duplicado
+        Por isso não pode ser colocado tudo numa tabela.
+
+Relacionamentos entre tabelas.
+    Chave estrangeira/ Foreign key. Estrangeira é porque aponta para outra tabela.
+        Ex. tabelas pedido e clientes
+            na tabela pedido tem uma chave estrangeira para a tabela clientes.
+                POR QUE ISSO? Porque o mesmo cliente pode ter mais de um pedido.
+
+                Ex:
+                alter table pedido_venda.pedido -- alterar a tabela pedido
+                    add column cliente_id bigint, -- adicionar uma coluna
+                        add constraint fk_cliente_id -- informar a existencia de uma restrição
+                            foreign key (cliente_id) -- chave estrangeira informando qual coluna é
+                                references cliente(id); -- referencia a tabela e a qual coluna se refere
+
+
+Relacionamentos muitos para um/ many to one.
+    Ex: um pedido tem um cliente. (UM/ONE)
+    Ex: um cliente tem muitos pedidos. (MUITOS/MANY)
+
+
+
