@@ -1,0 +1,19 @@
+not null -- Não aceita valor nulo
+
+No postgres ao alterar uma coluna não pode ser nula sem o default
+Ex: ERRO
+    ALTER TABLE pedido_venda.pedido
+        ADD COLUMN status varchar(255) not null default;
+Ex: CERTO
+    ALTER TABLE pedido_venda.pedido
+        ADD COLUMN status varchar(255) not null default 'ORÇAMENTO';
+
+
+Apagar Coluna
+Ex:
+DROP COLUMN NomeDaColuna
+
+Indices:
+    Serve para deixar a pesquisa muito mais rapida
+
+        Ex: para email de cliente ->
